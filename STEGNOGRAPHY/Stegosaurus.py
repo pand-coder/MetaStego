@@ -1,29 +1,6 @@
 import cv2
-import numpy as np
-print("                            .       .")
-print("                           / `.   .' \\")
-print("                   .---.  <    > <    >  .---.")
-print("                   |    \\  \\ - ~ ~ - /  /    |")
-print("                    ~-..-~             ~-..-~")
-print("                \\~~~\\.'                    `./~~~/")
-print("                 \\__/                        \\__/")
-print("                  /                  .-    .  \\")
-print("           _._ _.-    .-~ ~-.       /       }   \\/~~~/")
-print("       _.-'q  }~     /       }     {        ;    \\__/")
-print("      {'__,  /      (       /      {       /      `. ,~~|   .     .")
-print("       `''''='~~-.__(      /_      |      /- _      `..-'   \\\\   //")
-print("                   / \\   =/  ~~--~~{    ./|    ~-.     `-..__\\\\_//_.-'")
-print("                  {   \\  +\\         \\  =\\ (        ~ - . _ _ _..---~")
-print("                  |  | {   }         \\   \\_\\")
-print("                 '---.o___,'       .o___,' ")   
-print("           =============================================================   ")                                       
-print("                                   STEGOSAURUS                               ") 
-print("           =============================================================   ")
-print("           =============================================================   ")
-print("           ============================================================                        ")
-print("                        Author:  PAVAN SHANMUKHA MADHAV GUNDA                        ")
-print("           =============================================================                        ") 
-def Encoder(Source,Message,Destination):
+
+def Encoder(Source, Message, Destination):
     img = cv2.imread(Source)
     width, height, _ = img.shape
     total_pixels = width * height
@@ -72,8 +49,31 @@ def Decoder(Source):
     else:
         print("No Hidden Message Found")
 
-def Stegosauraus():
+def Stegosaurus():
     while True:
+        print("                         .       .")
+        print("                        / `.   .' \\")
+        print("                .---.  <    > <    >  .---.")
+        print("                |    \\  \\ - ~ ~ - /  /    |")
+        print("                 ~-..-~             ~-..-~")
+        print("             \\~~~\\.'                    `./~~~/")
+        print("              \\__/                        \\__/")
+        print("               /                  .-    .  \\")
+        print("        _._ _.-    .-~ ~-.       /       }   \\/~~~/")
+        print("    _.-'q  }~     /       }     {        ;    \\__/")
+        print("   {'__,  /      (       /      {       /      `. ,~~|   .     .")
+        print("    `''''='~~-.__(      /_      |      /- _      `..-'   \\\\   //")
+        print("                / \\   =/  ~~--~~{    ./|    ~-.     `-..__\\\\_//_.-'")
+        print("               {   \\  +\\         \\  =\\ (        ~ - . _ _ _..---~")
+        print("               |  | {   }         \\   \\_\\")
+        print("              '---.o___,'       .o___,' ")
+        print("        =============================================================   ")                                       
+        print("                                STEGOSAURUS                               ") 
+        print("        =============================================================   ")
+        print("        =============================================================   ")
+        print("        ============================================================                        ")
+        print("                     Author:  PAVAN SHANMUKHA MADHAV GUNDA                        ")
+        print("        =============================================================                        ") 
         print("--Welcome to Stegosauraus--")
         print("1: Encoder")
         print("2: Decoder")
@@ -106,5 +106,4 @@ def Stegosauraus():
 
 
 if __name__ == "__main__":
-    Stegosauraus()
-
+    Stegosaurus()

@@ -1,5 +1,5 @@
 import cv2
-
+import numpy as np
 def Encoder(Source, Message, Destination):
     img = cv2.imread(Source)
     width, height, _ = img.shape
@@ -18,8 +18,13 @@ def Encoder(Source, Message, Destination):
         for q in range(width):
             if index < req_pixels:
                 for c in range(3):
-                    img[p][q][c] = int(bin(img[p][q][c])[2:9] + b_message[index], 2)
-                    index += 1
+                    if index < req_pixels:
+                        img[p][q][c] = int(bin(img[p][q][c])[2:9] + b_message[index], 2)
+                        index += 1
+
+    cv2.imwrite(Destination, img)
+    print("Image Encoded Successfully")
+
 
     cv2.imwrite(Destination, img)
     print("Image Encoded Successfully")

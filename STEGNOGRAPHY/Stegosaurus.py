@@ -1,15 +1,26 @@
 import cv2
-import numpy as np
-def Encoder(Source, Message, Destination):
+from bitarray import bitarray
+def Encoder(Source, Message, Destination): 
     img = cv2.imread(Source)
+    if img is None:
+        print("Error: Image not found")
+        return
+
+    if len(img.shape) == 2:
+        print("Grayscale")
+    elif len(img.shape) == 3:
+        print("RGB or BGR")
+    elif len(img.shape) == 4:
+        print("RGBA")
     width, height, _ = img.shape
     total_pixels = width * height
 
-    Message += "pavan"
-    b_message = ''.join([format(ord(i), "08b") for i in Message])
-    req_pixels = len(b_message)
+    ba = bitarray()
+    ba.frombytes(Message.encode('utf-8'))
+    ba.extend('0' * 40)  # Padding to mark end of message
+    req_pixels = len(ba)
 
-    if req_pixels > total_pixels:
+    if req_pixels > total_pixels * 3:
         print("ERROR: Need larger file size")
         return
 
@@ -19,12 +30,8 @@ def Encoder(Source, Message, Destination):
             if index < req_pixels:
                 for c in range(3):
                     if index < req_pixels:
-                        img[p][q][c] = int(bin(img[p][q][c])[2:9] + b_message[index], 2)
+                        img[p][q][c] = (img[p][q][c] & 0xFE) | ba[index]
                         index += 1
-
-    cv2.imwrite(Destination, img)
-    print("Image Encoded Successfully")
-
 
     cv2.imwrite(Destination, img)
     print("Image Encoded Successfully")
@@ -34,25 +41,27 @@ def Decoder(Source):
     height, width, _ = img.shape
     total_pixels = width * height
 
-    hidden_bits = ""
+    ba = bitarray()
     for p in range(height):
         for q in range(width):
             for c in range(3):
-                hidden_bits += (bin(img[p][q][c])[2:][-1])
+                ba.append(img[p][q][c] & 1)
 
-    hidden_bits = [hidden_bits[i:i+8] for i in range(0, len(hidden_bits), 8)]
+    # Extract the message bytes
+    message_bytes = bytearray()
+    for i in range(0, len(ba), 8):
+        byte = ba[i:i+8].tobytes()
+        message_bytes.append(int.from_bytes(byte, byteorder='big'))
 
-    Message = ""
-    for i in range(len(hidden_bits)):
-        if Message[-5:] == "pavan":
-            break
-        else:
-            Message += chr(int(hidden_bits[i], 2))
-
-    if "pavan" in Message:
-        print("Hidden Message:", Message[:-5])
+    # Find the end-of-message padding
+    padding_index = message_bytes.find(0)
+    if padding_index != -1:
+        message = message_bytes[:padding_index].decode('utf-8')
+        print("Hidden Message:", message)
     else:
         print("No Hidden Message Found")
+
+
 
 def Stegosaurus():
     while True:
@@ -112,3 +121,4 @@ def Stegosaurus():
 
 if __name__ == "__main__":
     Stegosaurus()
+

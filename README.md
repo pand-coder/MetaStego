@@ -6,11 +6,11 @@ This repository contains various cybersecurity projects developed by [Pavan Shan
 
 ### RhinoEye
 - **Description**: RhinoEye is an OSINT (Open Source Intelligence) tool designed to automate aspects of information gathering and analysis.
-- **File**: [Rhinoeye.py](Rhinoeye.py)
+- **File**: [Rhinoeye.py](https://github.com/pand-coder/Cybrary_tools/tree/main/Rhinoeye)
 
 ### Stegnosaraus
 - **Description**: Stegnosaraus is a steganography tool for hiding secret messages or files within other files.
-- **File**: [Stegnosaraus.py](Stegnosaraus.py)
+- **File**: [Stegnosaraus.py](https://github.com/pand-coder/Cybrary_tools/tree/main/STEGNOGRAPHY)
 
 ## Usage
 - Clone the repository: `git clone https://github.com/yourusername/Cybrary_tools.git`

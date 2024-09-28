@@ -1,12 +1,12 @@
-# MetaStego - A Steganography and Metadata Tool
+# Stegavault - A Steganography and Metadata Tool
 
-**MetaStego** is a versatile tool designed to encode and decode hidden messages within images, while also providing capabilities to extract image metadata. Whether you're aiming to conceal confidential information or analyze image properties, MetaStego offers a comprehensive solution.
+**Stegavault** is a versatile tool designed to encode and decode hidden messages within images, while also providing capabilities to extract image metadata. Whether you're aiming to conceal confidential information or analyze image properties, Stegavault offers a comprehensive solution.
 
 ---
 
 ## Overview
 
-MetaStego combines steganography techniques with metadata management, enabling users to:
+Stegavault combines steganography techniques with metadata management, enabling users to:
 
 - **Embed Hidden Messages**: Conceal text or data within image files without noticeable alterations to the image.
 - **Extract Hidden Messages**: Retrieve and decode concealed information from images.
@@ -25,7 +25,7 @@ MetaStego combines steganography techniques with metadata management, enabling u
 
 ## Installation
 
-To get started with MetaStego, follow these steps:
+To get started with Stegavault, follow these steps:
 
 
 ## <p style="font-size:3rem;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Get Started</p>
@@ -40,11 +40,11 @@ To get started with MetaStego, follow these steps:
 2. **Clone the repository:**
    Clone the forked repository to your local machine using the following command in your terminal.
    ```bash
-      git clone https://github.com/<your-github-username>/MetaStego
+      git clone https://github.com/<your-github-username>/Stegavault
    ```
 3. **Add a remote upstream:**
    ```bash
-   git remote add upstream https://github.com/pand-coder/Metastego
+   git remote add upstream https://github.com/pand-coder/Stegavault
    ```
 4. **Create a new branch:**
    Create a new branch for your changes. Run the following command in your terminal.

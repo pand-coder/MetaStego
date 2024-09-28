@@ -1,4 +1,4 @@
-# Stegosaurus Project
+# MetaStego - A Steganography and Metadata Tool
 
 ## Overview
 

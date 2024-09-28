@@ -1,19 +1,32 @@
 # MetaStego - A Steganography and Metadata Tool
 
+**MetaStego** is a versatile tool designed to encode and decode hidden messages within images, while also providing capabilities to extract image metadata. Whether you're aiming to conceal confidential information or analyze image properties, MetaStego offers a comprehensive solution.
+
+---
+
 ## Overview
 
-The Stegosaurus project focuses on the identification and management of hidden or embedded information within digital media files using steganography techniques. The goal of this project is to develop tools and algorithms for detecting and extracting concealed data from various file formats, thereby enhancing data security and privacy.
+MetaStego combines steganography techniques with metadata management, enabling users to:
+
+- **Embed Hidden Messages**: Conceal text or data within image files without noticeable alterations to the image.
+- **Extract Hidden Messages**: Retrieve and decode concealed information from images.
+- **Extract Metadata**: Obtain detailed information about images, such as dimensions, format, and other properties.
+
+---
 
 ## Features
 
-- **Detection of Hidden Data:** Identify hidden messages or information embedded within digital media files.
-- **Extraction Tools:** Extract concealed data from different file formats.
-- **Support for Various Formats:** Handle multiple types of media files, including images, audio, and video.
-- **Data Security:** Implement robust methods for data hiding and extraction to maintain privacy and security.
+- **Steganography**: Utilize advanced methods to embed and extract hidden data in images, ensuring the process is imperceptible to the human eye.
+- **Metadata Extraction**: Access comprehensive metadata from image files to aid in analysis or archival processes.
+- **User-Friendly Interface**: Interact with the tool through an intuitive command-line interface, facilitating ease of use for both novices and experts.
+- **Support for Multiple Formats**: Handle various image formats, including JPEG, PNG, and BMP.
+
+---
 
 ## Installation
 
-To get started with the Stegosaurus project, follow these steps:
+To get started with MetaStego, follow these steps:
+
 
 ## <p style="font-size:3rem;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Get Started</p>
 
@@ -27,11 +40,11 @@ To get started with the Stegosaurus project, follow these steps:
 2. **Clone the repository:**
    Clone the forked repository to your local machine using the following command in your terminal.
    ```bash
-   git clone https://github.com/<your-github-username>/TOOLKIT
+      git clone https://github.com/<your-github-username>/MetaStego
    ```
 3. **Add a remote upstream:**
    ```bash
-   git remote add upstream https://github.com/pand-coder/TOOLKIT
+   git remote add upstream https://github.com/pand-coder/Metastego
    ```
 4. **Create a new branch:**
    Create a new branch for your changes. Run the following command in your terminal.
